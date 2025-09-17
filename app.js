@@ -52,10 +52,8 @@ app.put("/customers/:id", (req, res) => {
     customers[index] = customer;
     res.status(200).json(customer);
 });
-   
 
 //DELETE
-
 app.delete("/customers/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const customer = customers.find(c => c.id === id);
